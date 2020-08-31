@@ -11487,6 +11487,20 @@ var Amplitude = function () {
     return _config2.default.volume;
   }
 
+  /**
+  * Allows the user to stop whatever the active song is directly
+  * through Javascript.
+  * 
+  * Public Accessor: Amplitude.stop();
+  * 
+  * @access public
+  */
+  function stop() {
+    _core2.default.stop();
+
+    _configState2.default.setPlayerState();
+  }
+
   /*
   Returns all of the publically accesible methods.
   */
@@ -11553,7 +11567,8 @@ var Amplitude = function () {
     setSongInPlaylistVisualization: setSongInPlaylistVisualization,
     setGlobalVisualization: setGlobalVisualization,
     getVolume: getVolume,
-    setVolume: setVolume
+    setVolume: setVolume,
+    stop: stop
   };
 }();
 
